@@ -28,57 +28,12 @@ public class MainActivity extends AppCompatActivity{
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-/*
-        TextView numbers = (TextView) findViewById(R.id.numbers);
-        TextView family = (TextView) findViewById(R.id.family);
-        TextView colors = (TextView) findViewById(R.id.colors);
-        TextView phrases = (TextView) findViewById(R.id.phrases);
-
-        // Set a click listener on that View
-        numbers.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the numbers View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
-                startActivity(numbersIntent);
-            }
-        });
-
-        // Set a click listener on that View
-        family.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the family View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
-                startActivity(familyIntent);
-            }
-        });
-
-        // Set a click listener on that View
-        colors.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the colors View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
-                startActivity(colorsIntent);
-            }
-        });
-
-        // Set a click listener on that View
-        phrases.setOnClickListener(new View.OnClickListener() {
-            // The code in this method will be executed when the phrases View is clicked on.
-            @Override
-            public void onClick(View view) {
-                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
-                startActivity(phrasesIntent);
-            }
-        });*/
 
 // Find the view pager that will allow the user to swipe between fragments
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
 
         // Create an adapter that knows which fragment should be shown on each page
-        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager());
+        CategoryAdapter adapter = new CategoryAdapter(getSupportFragmentManager());
 
         // Set the adapter onto the view pager
         viewPager.setAdapter(adapter);

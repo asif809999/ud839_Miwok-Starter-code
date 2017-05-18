@@ -8,9 +8,9 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by asif on 5/18/17.
  */
 
-public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
+public class CategoryAdapter extends FragmentPagerAdapter {
 
-    public SimpleFragmentPagerAdapter(FragmentManager fm) {
+    public CategoryAdapter(FragmentManager fm) {
         super(fm);
     }
     @Override
