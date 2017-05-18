@@ -159,6 +159,14 @@ public class FamilyFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        // When the activity is stopped, release the media player resources because we won't
+        // be playing any more sounds.
+        releaseMediaPlayer();
+    }
+
     /**
      * Clean up the media player by releasing its resources.
      */
@@ -180,11 +188,5 @@ public class FamilyFragment extends Fragment {
         }
     }
 
-    @Override
-    public void onStop() {
-        // When the activity is stopped, release the media player resources because we won't
-        // be playing any more sounds.
-        releaseMediaPlayer();
-    }
 
 }

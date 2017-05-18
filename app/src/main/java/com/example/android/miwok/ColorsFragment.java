@@ -160,7 +160,13 @@ public class ColorsFragment extends Fragment {
 
     }
 
-
+    @Override
+    public void onStop() {
+        super.onStop();
+        // When the activity is stopped, release the media player resources because we won't
+        // be playing any more sounds.
+        releaseMediaPlayer();
+    }
 
     /**
      * Clean up the media player by releasing its resources.
@@ -181,13 +187,6 @@ public class ColorsFragment extends Fragment {
             // unregisters the AudioFocusChangeListener so we don't get anymore callbacks.
             mAudioManager.abandonAudioFocus(audioFocusChangeListener);
         }
-    }
-
-    @Override
-    public void onStop() {
-        // When the activity is stopped, release the media player resources because we won't
-        // be playing any more sounds.
-        releaseMediaPlayer();
     }
 
 }
